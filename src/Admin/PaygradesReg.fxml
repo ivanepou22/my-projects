@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="631.0" prefWidth="874.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.PaygradesRegController">
+   <children>
+      <BorderPane prefHeight="631.0" prefWidth="980.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane dividerPositions="0.9766" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Accordion prefHeight="491.0" prefWidth="843.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <panes>
+                              <TitledPane animated="false" prefHeight="245.0" prefWidth="777.0" text="Pay Grades">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane layoutX="23.0" prefHeight="32.0" prefWidth="812.0" style="-fx-background-color: #B0E0E6;">
+                                             <children>
+                                                <Label layoutX="2.0" layoutY="8.0" prefHeight="20.0" prefWidth="264.0" text="Register A new PayGrade Information" textFill="#544d4d">
+                                                   <font>
+                                                      <Font name="Britannic Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children></Pane>
+                                          <ScrollPane layoutX="25.0" layoutY="33.0" prefHeight="270.0" prefViewportHeight="194.0" prefViewportWidth="790.0" prefWidth="808.0">
+                                             <content>
+                                                <GridPane layoutX="58.0" layoutY="83.0" prefHeight="264.0" prefWidth="762.0">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="304.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="486.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <TextField GridPane.columnIndex="1" />
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <ComboBox prefHeight="25.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="274.0" text="Pay Grade Name">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Currency" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Min Salary" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Max Salary" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="274.0" text="Default Salary" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                         <children>
+                                                            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                                            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="115.0" style="-fx-background-color: #ff7433;" text="Cancel">
+                                                               <font>
+                                                                  <Font name="Times New Roman Bold" size="12.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="122.0" style="-fx-background-color: #33a2ff;" text="Save" textFill="WHITE" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </GridPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+               </items>
+            </SplitPane>
+         </center>
+         <left>
+            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <TabPane prefHeight="138.0" prefWidth="1010.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Pay Grades">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="637.0">
+                           <children>
+                              <TabPane prefHeight="128.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab text="Actions">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="777.0" style="-fx-background-color: #FFFFFF;" />
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

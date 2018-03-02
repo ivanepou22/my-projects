@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="611.0" prefWidth="784.0" styleClass="mainFxmlClass" stylesheets="@RoleCenter.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="humanresourcesystem.RoleCenterController">
+   <bottom>
+      <Pane prefHeight="25.0" prefWidth="784.0" style="-fx-background-color: #174063;" styleClass="mainFxmlClass" stylesheets="@RoleCenter.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="3.0" layoutY="4.0" text="Adroit Human Resource Managemnt System" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font></Label>
+         </children>
+      </Pane>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.0138" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="30.0">
+               <children>
+                  <Accordion prefHeight="571.0" prefWidth="215.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <panes>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #293949;" text="Home">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="150.0">
+                                 <children>
+                                    <ListView fx:id="home" prefHeight="120.0" prefWidth="149.0" styleClass="adminList" stylesheets="@RoleCenter.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                      <TitledPane animated="false" style="-fx-background-color: #293949;" text="Admin">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="150.0">
+                                 <children>
+                                    <ListView fx:id="admin" prefHeight="120.0" prefWidth="149.0" styleClass="adminList" stylesheets="@RoleCenter.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                          </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Employees">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="employee" prefHeight="90.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />    
+                                 </children>
+                          </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Leave Management">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="leave" prefHeight="50.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                          </AnchorPane>
+                        </content>
+                      </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="60.0" text="Payroll Management">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="payroll" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="85.0" text="Personal Information">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="personal" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="110.0" text="Time Management">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="time" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="160.0" text="Recruitement Management">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="recruite" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="185.0" text="Company Items">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="company" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="210.0" text="Finance">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="Finance" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="260.0" text="Documents">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="documents" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children></AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="285.0" text="Settings">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ListView fx:id="setting" prefHeight="241.0" prefWidth="181.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+          <AnchorPane fx:id="activitiesPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </center>
+   <top>
+      <HBox prefHeight="33.0" prefWidth="784.0" style="-fx-background-color: #78b7ed;" BorderPane.alignment="CENTER">
+         <children>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="toplabel" alignment="CENTER" prefHeight="47.0" prefWidth="252.0" style="-fx-background-color: #F0F8FF;" styleClass="Button" stylesheets="@RoleCenter.css" text="Role Center" textFill="#2f2c2c" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="HomeLabel" prefHeight="39.0" prefWidth="37.0" styleClass="Button" stylesheets="@RoleCenter.css">
+               <graphic>
+                  <VBox prefHeight="28.0" prefWidth="42.0">
+                     <children>
+                        <ImageView fitHeight="22.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/home_black_36x36.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="17.0" prefWidth="49.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Home" />
+                     </children>
+                  </VBox>
+               </graphic>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="HomeLabel1" layoutX="274.0" layoutY="10.0" prefHeight="39.0" prefWidth="37.0" styleClass="Button" stylesheets="@RoleCenter.css">
+               <graphic>
+                  <VBox prefHeight="28.0" prefWidth="42.0">
+                     <children>
+                        <ImageView fitHeight="32.0" fitWidth="44.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Images/Icons/icons8-menu.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </graphic>
+            </Label>
+            <Separator layoutX="305.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Region prefHeight="34.0" prefWidth="126.0" HBox.hgrow="ALWAYS" />
+            <TextField prefHeight="25.0" prefWidth="320.0" promptText="Search" style="-fx-background-radius: 15;">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+         </children>
+      </HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,30 @@
+.mainFxmlClass {
+-fx-text-fill: white;
+
+/*    .button:hover{
+       -fx-background-color: blueviolet;
+       -fx-text-fill: white;
+    }*/
+}
+.adminList {
+    -fx-text-fill: white;
+    -fx-font-family: 'Aclonica';
+    
+}
+.Button:hover{
+    -fx-background-color:  #00BFFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    
+}
+.image:hover{
+    -fx-background-color: white;
+}
+/*.label{
+    -fx-background-color: #4682B4;
+    -fx-text-fill: white;
+}
+.label:hover{
+    -fx-background-color: #00008B;
+    -fx-text-fill: white;
+}*/

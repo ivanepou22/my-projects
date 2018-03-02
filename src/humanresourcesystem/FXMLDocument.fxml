@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="loginAcnhorPane" prefHeight="330.0" prefWidth="523.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="humanresourcesystem.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" ellipsisString="" layoutX="191.0" layoutY="237.0" onAction="#handleButtonAction" prefHeight="31.0" prefWidth="167.0" style="-fx-background-radius: 45; -fx-background-color: #008FCD;" styleClass="loginbutton" text="Login" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Arial Narrow Bold" size="14.0" />
+         </font></Button>
+      <TextField alignment="CENTER" layoutX="133.0" layoutY="137.0" prefHeight="31.0" prefWidth="283.0" promptText="User Name" style="-fx-background-radius: 20;">
+         <effect>
+            <Glow />
+         </effect></TextField>
+      <PasswordField alignment="CENTER" layoutX="135.0" layoutY="183.0" prefHeight="31.0" prefWidth="283.0" promptText="Password" style="-fx-background-radius: 20;">
+         <effect>
+            <Glow />
+         </effect></PasswordField>
+      <Separator layoutY="289.0" prefHeight="17.0" prefWidth="573.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="289.0" />
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="136.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Icons/userss.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="137.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Icons/pad.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="143.0" fitWidth="123.0" layoutX="205.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Icons/account_circle_grey_108x108.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

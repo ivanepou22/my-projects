@@ -1,0 +1,1339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Employeepane" prefHeight="660.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="humanresourcesystem.EmployeesController">
+   <children>
+      <HBox prefHeight="687.0" prefWidth="1062.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="651.0" prefWidth="966.0" tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+               <tabs>
+                  <Tab text="Employees">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="EMPLOYEE LIST">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="100.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0">
+                                                   <children>
+                                                      <HBox layoutX="6.0" layoutY="3.0" prefHeight="68.0" prefWidth="1057.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonEmp" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add-user-male.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit-account.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-settings.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label styleClass="Button" stylesheets="@RoleCenter.css" text="Settings" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox layoutY="6.0" prefHeight="62.0" prefWidth="1057.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-cv.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Skills" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-graduation-cap.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="58.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Education" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="68.0" prefWidth="67.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-graduation-cap%20(1).png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label styleClass="Button" stylesheets="@RoleCenter.css" text="Certification" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label layoutX="22.0" layoutY="10.0" prefHeight="68.0" prefWidth="64.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-language.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="71.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Languages" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label layoutX="211.0" layoutY="10.0" prefHeight="68.0" prefWidth="77.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-people.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="76.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Dependants" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label layoutX="268.0" layoutY="10.0" prefHeight="68.0" prefWidth="60.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="68.0" prefWidth="52.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-contacts.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="54.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Contacts" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label layoutX="325.0" layoutY="10.0" prefHeight="68.0" prefWidth="72.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-personal-trainer.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="52.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Referees" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Skills">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="SKILLS">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="100.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0">
+                                                   <children>
+                                                      <HBox layoutX="6.0" layoutY="10.0" prefHeight="73.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonSkills" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Education">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Education">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="96.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0">
+                                                   <children>
+                                                      <HBox layoutY="6.0" prefHeight="67.0" prefWidth="1063.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonEducation" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Certification">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Certification">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="94.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0">
+                                                   <children>
+                                                      <HBox layoutY="4.0" prefHeight="79.0" prefWidth="1063.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonCertification" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Languages">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Languages">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="100.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0" style="-fx-background-color: #FFFFFF;">
+                                                   <children>
+                                                      <HBox layoutY="12.0" prefHeight="71.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="12.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonLanguages" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Dependants">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Dependants">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="102.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0" style="-fx-background-color: #FFFFFF;">
+                                                   <children>
+                                                      <HBox layoutY="14.0" prefHeight="69.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonDependant" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Emergency Contacts">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Emergency Contacts">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="100.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0" style="-fx-background-color: #FFFFFF;">
+                                                   <children>
+                                                      <HBox layoutY="6.0" prefHeight="65.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonContact" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Referees">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <BorderPane prefHeight="631.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <SplitPane dividerPositions="0.8661" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <items>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <ScrollPane prefViewportHeight="517.0" prefViewportWidth="902.0">
+                                                   <content>
+                                                      <TableView prefHeight="535.0" prefWidth="916.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn prefWidth="150.0" text="Name" />
+                                                            <TableColumn minWidth="0.0" prefWidth="0.0" text="C2" />
+                                                            <TableColumn prefWidth="181.0" text="Number" />
+                                                            <TableColumn prefWidth="132.0" text="Email" />
+                                                            <TableColumn prefWidth="167.0" text="Address" />
+                                                            <TableColumn prefWidth="209.0" text="Job Title" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Label alignment="CENTER" layoutX="-5.0" prefHeight="34.0" prefWidth="158.0" style="-fx-background-color: #B0E0E6;" text="Referees">
+                                                   <font>
+                                                      <Font name="Century Schoolbook" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </items>
+                                    </SplitPane>
+                                 </center>
+                                 <top>
+                                    <TabPane prefHeight="94.0" prefWidth="1063.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                                       <tabs>
+                                          <Tab text="Home">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="136.0" prefWidth="1062.0" style="-fx-background-color: #FFFFFF;">
+                                                   <children>
+                                                      <HBox layoutY="4.0" prefHeight="79.0" prefWidth="1063.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+                                                         <children>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#newButtonReferee" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-add.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="41.0" styleClass="Button" stylesheets="@RoleCenter.css" text="New" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-edit.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="39.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Edit" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="80.0" prefWidth="0.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-delete.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="43.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Delete" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="59.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-view.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="48.0" styleClass="Button" stylesheets="@RoleCenter.css" text="View" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Region prefHeight="80.0" prefWidth="241.0" HBox.hgrow="ALWAYS" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <TextField alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="365.0" promptText="Search the Table" style="-fx-background-radius: 35;">
+                                                               <HBox.margin>
+                                                                  <Insets top="12.0" />
+                                                               </HBox.margin>
+                                                            </TextField>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Label onMouseClicked="#buttonRefreshEmp1" prefHeight="80.0" prefWidth="57.0" style="-fx-background-radius: 5;" styleClass="Button" stylesheets="@RoleCenter.css">
+                                                               <graphic>
+                                                                  <VBox prefHeight="200.0" prefWidth="100.0">
+                                                                     <children>
+                                                                        <ImageView fitHeight="41.0" fitWidth="58.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                                                                           <image>
+                                                                              <Image url="@../Images/Icons/icons8-refresh.png" />
+                                                                           </image>
+                                                                        </ImageView>
+                                                                        <Label alignment="CENTER" prefHeight="17.0" prefWidth="51.0" styleClass="Button" stylesheets="@RoleCenter.css" text="Refresh" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </graphic>
+                                                            </Label>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </AnchorPane>
+                                             </content>
+                                          </Tab>
+                                          <Tab text="Actions">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                             </content>
+                                          </Tab>
+                                       </tabs>
+                                    </TabPane>
+                                 </top>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

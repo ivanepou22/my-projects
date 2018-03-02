@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.JobTitleRegController">
+   <children>
+      <BorderPane prefHeight="640.0" prefWidth="980.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <SplitPane dividerPositions="0.9766" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Accordion prefHeight="443.0" prefWidth="645.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <panes>
+                              <TitledPane animated="false" prefHeight="245.0" prefWidth="777.0" text="Job Title">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane layoutX="36.0" prefHeight="32.0" prefWidth="794.0" style="-fx-background-color: #B0E0E6;">
+                                             <children>
+                                                <Label layoutX="2.0" layoutY="8.0" prefHeight="20.0" prefWidth="264.0" text="Register A new Job Title" textFill="#544d4d">
+                                                   <font>
+                                                      <Font name="Britannic Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <ScrollPane layoutX="37.0" layoutY="32.0" prefHeight="365.0" prefViewportHeight="194.0" prefViewportWidth="790.0" prefWidth="792.0">
+                                             <content>
+                                                <GridPane layoutX="58.0" layoutY="83.0" prefHeight="340.0" prefWidth="762.0">
+                                                   <children>
+                                                      <TextField prefHeight="35.0" prefWidth="510.0" GridPane.columnIndex="1" />
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="236.0" text="Job Code">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="234.0" text="Job Title" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="231.0" text="Min Salary" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="236.0" text="Max Salary" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField prefHeight="35.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextArea prefHeight="117.0" prefWidth="490.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="252.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="510.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="117.0" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="52.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints maxHeight="148.0" minHeight="0.0" prefHeight="148.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutX="10.0" layoutY="10.0" prefHeight="245.0" prefWidth="777.0" text="Leave Setup">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Pane layoutX="12.0" prefHeight="32.0" prefWidth="794.0" style="-fx-background-color: #B0E0E6;">
+                                             <children>
+                                                <Label layoutX="2.0" layoutY="8.0" prefHeight="20.0" prefWidth="264.0" text="Leave Setup" textFill="#544d4d">
+                                                   <font>
+                                                      <Font name="Britannic Bold" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                          <ScrollPane layoutX="14.0" layoutY="33.0" prefHeight="406.0" prefViewportHeight="194.0" prefViewportWidth="790.0" prefWidth="792.0">
+                                             <content>
+                                                <GridPane layoutX="58.0" layoutY="83.0" prefHeight="338.0" prefWidth="762.0">
+                                                   <children>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="274.0" text="Maternity Days" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Paternity Days" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Compassionate Days" GridPane.rowIndex="5">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="272.0" text="Carry Forward" GridPane.rowIndex="6">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="274.0" text="Maximum Moved Forward" GridPane.rowIndex="7">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="135.0" prefHeight="17.0" prefWidth="274.0" text="Annual Days">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="135.0" prefHeight="17.0" prefWidth="274.0" text="Sick Days" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="135.0" prefHeight="17.0" prefWidth="274.0" text="Study Days " GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font name="Times New Roman Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField prefHeight="31.0" prefWidth="472.0" GridPane.columnIndex="1" />
+                                                      <TextField prefHeight="31.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <TextField prefHeight="33.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <TextField prefHeight="31.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <TextField prefHeight="33.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <TextField prefHeight="31.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                      <TextField prefHeight="29.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                      <ComboBox prefHeight="33.0" prefWidth="472.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                                         <children>
+                                                            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                                            <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="138.0" style="-fx-background-color: #ff7433;" text="Cancel" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Times New Roman Bold" size="12.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                                            <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #33a2ff;" text="Save" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="Times New Roman Bold" size="12.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="380.0" minWidth="10.0" prefWidth="304.0" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="486.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                </GridPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+               </items>
+            </SplitPane>
+         </center>
+         <left>
+            <Separator orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: silver;" BorderPane.alignment="CENTER" />
+         </left>
+         <top>
+            <TabPane prefHeight="138.0" prefWidth="1010.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="Job Title And Leave Setup">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="121.0" prefWidth="637.0">
+                           <children>
+                              <TabPane prefHeight="128.0" prefWidth="637.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <tabs>
+                                    <Tab text="Actions">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="777.0" style="-fx-background-color: #FFFFFF;" />
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
